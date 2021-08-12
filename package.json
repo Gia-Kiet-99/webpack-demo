@@ -1,0 +1,10 @@
+{
+  "name": "testwebpack",
+  "version": "1.0.0",
+  "main": "app.js",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "webpack": "^5.50.0"
+  }
+}
