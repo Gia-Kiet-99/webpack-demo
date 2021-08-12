@@ -1,13 +1,41 @@
 const path = require("path");
 
-module.exports = (env) => {
-  console.log(env);
-  return {
-    mode: env.production ? "production" : "development",
-    entry: "./src/index.js",
-    output: {
-      filename: "main.js",
-      path: path.resolve(__dirname, "dist")
-    }
+/**
+ * Configuration type: function
+ */
+// module.exports = (env) => {
+//   console.log(env);
+//   return {
+//     mode: env.production ? "production" : "development",
+//     entry: "./src/index.js",
+//     output: {
+//       filename: "bundle.js",
+//       path: path.resolve(__dirname, "dist")
+//     },
+//     module: {
+//       rules: [
+//         {
+//           test: /\.css$/i,
+//           use: ["style-loader", "css-loader"]
+//         }
+//       ]
+//     }
+//   }
+// }
+
+module.exports = {
+  mode: "production",
+  entry: "./src/index.js",
+  output: {
+    filename: "bundle.js",
+    path: path.resolve(__dirname, "dist")
+  },
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"]
+      }
+    ]
   }
 }
