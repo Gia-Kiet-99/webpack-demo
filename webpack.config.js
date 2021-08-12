@@ -7,6 +7,11 @@ module.exports = {
     index: "./src/index.js",
     print: "./src/print.js"
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: "Output Management"
+    }),
+  ],
   output: {
     filename: "[name].bundle.js", // filename base on entry point
     path: path.resolve(__dirname, "dist")
