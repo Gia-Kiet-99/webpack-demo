@@ -5,7 +5,6 @@ module.exports = {
   mode: 'development',
   entry: {
     index: './src/index.js',
-    another: './src/another-module.js',
   },
   // using source map in order to map compiled code back to original source code 
   // to tracking errors, warnings
@@ -28,12 +27,6 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     clean: true, // clean dist folder before each build
     // publicPath: '/',
-  },
-  optimization: {
-    // runtimeChunk: 'single',
-    splitChunks: {
-      chunks: 'all',
-    }
   },
 }
 
