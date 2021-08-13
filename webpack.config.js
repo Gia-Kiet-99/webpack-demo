@@ -4,24 +4,17 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   mode: 'development',
   entry: {
-    index: {
-      import: './src/index.js',
-      dependOn: 'shared',
-    },
-    another: {
-      import: './src/another-module.js',
-      dependOn: 'shared',
-    },
-    shared: 'lodash',
+    index: './src/index.js',
+    another: './src/another-module.js',
   },
   // using source map in order to map compiled code back to original source code 
   // to tracking errors, warnings
-  // devtool: 'inline-source-map',
+  devtool: 'inline-source-map',
 
   // using webpack-dev-server which provides a rudimentary server and live reloading
-  // devServer: {
-  //   contentBase: './dist',
-  // },
+  devServer: {
+    contentBase: './dist',
+  },
 
   plugins: [
     // generate index.html automatically
@@ -37,7 +30,10 @@ module.exports = {
     // publicPath: '/',
   },
   optimization: {
-    runtimeChunk: 'single',
+    // runtimeChunk: 'single',
+    splitChunks: {
+      chunks: 'all',
+    }
   },
 }
 
