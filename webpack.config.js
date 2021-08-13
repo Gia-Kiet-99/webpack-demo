@@ -5,30 +5,37 @@ module.exports = {
   mode: 'development',
   entry: {
     index: './src/index.js',
-    print: './src/print.js',
+    another: './src/another-module.js',
   },
   // using source map in order to map compiled code back to original source code 
   // to tracking errors, warnings
-  devtool: 'inline-source-map',
+  // devtool: 'inline-source-map',
+
   // using webpack-dev-server which provides a rudimentary server and live reloading
-  devServer: {
-    contentBase: './dist',
-  },
+  // devServer: {
+  //   contentBase: './dist',
+  // },
+
   plugins: [
     // generate index.html automatically
     new HtmlWebpackPlugin({
-      title: 'Development'
+      title: 'Code Splitting'
     }),
   ],
+
   output: {
-    // filename base on entry point
-    filename: '[name].bundle.js',
+    filename: '[name].bundle.js', // filename base on entry point
     path: path.resolve(__dirname, 'dist'),
-    // clean dist folder before each build
-    clean: true,
-    publicPath: '/',
+    clean: true, // clean dist folder before each build
+    // publicPath: '/',
   }
 }
+
+
+
+
+
+
 
 /**
  * Configuration type: function
