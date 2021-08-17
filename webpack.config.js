@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   mode: 'development',
   entry: './src/index.js',
-  // using source map in order to map compiled code back to original source code 
+  // using source map in order to map compiled code back to original source code
   // to tracking errors, warnings
   devtool: 'inline-source-map',
 
@@ -16,7 +16,7 @@ module.exports = {
   plugins: [
     // generate index.html automatically
     new HtmlWebpackPlugin({
-      title: 'Caching'
+      title: 'Caching',
     }),
   ],
 
@@ -38,14 +38,8 @@ module.exports = {
         },
       },
     },
-  }
-}
-
-
-
-
-
-
+  },
+};
 
 /**
  * Configuration type: function
