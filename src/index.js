@@ -15,7 +15,7 @@ const test = {
   },
 };
 
-test.getGt4();
+console.log(test.getGt4());
 
 const component = () => {
   const element = document.createElement('div');
