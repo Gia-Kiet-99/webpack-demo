@@ -10,12 +10,12 @@ const test = {
   getAge() {
     return 22;
   },
-  getGt4() {
-    return Array.from([1, 2, 3], (x) => x + x);
-  },
+  // getGt4() {
+  //   return Array.from([1, 2, 3]);
+  // },
 };
 
-console.log(test.getGt4());
+console.log(test.getAge());
 
 const component = () => {
   const element = document.createElement('div');
