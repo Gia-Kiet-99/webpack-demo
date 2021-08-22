@@ -1,12 +1,10 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-// require('@babel/polyfill');
 
 module.exports = {
   mode: 'development',
   entry: [
-    // '@babel/polyfill', // config polyfill
-    './src/index.js'
+    './src/index.js',
   ],
   // using source map in order to map compiled code back to original source code
   // to tracking errors, warnings

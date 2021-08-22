@@ -1,5 +1,4 @@
-// import 'core-js/stable';
-// import 'regenerator-runtime/runtime';
+import '@babel/polyfill';
 import _ from 'lodash';
 import Print from './print';
 
@@ -10,12 +9,12 @@ const test = {
   getAge() {
     return 22;
   },
-  // getGt4() {
-  //   return Array.from([1, 2, 3]);
-  // },
+  getGt4() {
+    return Array.from([1, 2, 3]);
+  },
 };
 
-console.log(test.getAge());
+console.log(test.getGt4());
 
 const component = () => {
   const element = document.createElement('div');
